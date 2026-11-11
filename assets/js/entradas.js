@@ -18,7 +18,6 @@ window.ARDURA_ENTRADAS = [
     parrafos: [
       "Hay cosas que empiezan como una frase suelta, escrita a cualquier hora, y que no sabemos muy bien dónde guardar.",
       "A veces acaban siendo canciones. Otras, simplemente necesitan quedarse en palabras.",
-      "Este es un texto de demostración para que veas cómo quedarán tus publicaciones. Puedes sustituirlo por uno tuyo en assets/js/entradas.js."
     ],
     visible: true
   }
