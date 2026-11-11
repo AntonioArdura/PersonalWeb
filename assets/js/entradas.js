@@ -14,7 +14,7 @@ window.ARDURA_ENTRADAS = [
     titulo: "Las primeras palabras del viaje",
     fecha: "2024-10-13",
     etiqueta: "En Chicago",
-    extracto: "Un espacio para escribir lo que todavía no sé convertir en música.",
+    extracto: "Si me llegan a preguntar hace un año donde me veía hoy, seguro que no era aquí sentado escribiendo esto.",
     parrafos: [
       "Abrirse y expresarse pueden ser de las cosas más complicadas a las que me he tenido que afrontar. Escribir sobre ello, verbalizarlo, ponerle nombre es difícil y angustioso, pero genera a su vez esa paz que uno necesita para dejar ir el dolor y sanarse por dentro.",  
       "Nunca pensé que este nuevo viaje me llegaría a hacer tanto daño y me enseñaría sobre  esa gente de alrededor que no me había parado a mirar. Esa gente que daba por supuesto que estaba ahí o que no había dedicado tanto tiempo, pero que merecen mucho la pena.", 
