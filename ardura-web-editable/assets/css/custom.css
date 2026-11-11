@@ -1,0 +1,205 @@
+/* ================================================================
+   ARDURA · PERSONALIZACIÓN DE LA WEB
+   Este es el archivo principal para cambiar aspecto, portada y color.
+   Puedes cambiar cualquier valor y guardar. Después recarga index.html.
+   ================================================================ */
+
+:root {
+  --bg: #0d0b0d;            /* Fondo negro */
+  --ink: #faf8f6;           /* Letras blancas */
+  --muted: #bbb0af;         /* Textos secundarios */
+  --accent: #a9343e;        /* Rojo vino apagado (cámbialo aquí) */
+  --line: #35292d;
+  --panel: #1a1518;
+  --foto-brillo: 1;         /* Ajusta 0.65, 0.85, 1.0 o 1.2 */
+  --foto-opacidad: 1;       /* Ajusta de 0 a 1 */
+}
+
+body { background:#0d0b0d; }
+.site-header { height:78px; background:rgba(12,9,11,.96); border-bottom:1px solid #382429; }
+.site-header .header-inner { max-width:1390px; }
+.nav-links a { font-size:11px; letter-spacing:.18em; color:#ded4d4; }
+.nav-links a[aria-current="page"] { color:#fff; position:relative; }
+.nav-links a[aria-current="page"]:after {
+  content:""; position:absolute; height:2px; left:0; right:0; bottom:-14px;
+  background:var(--accent);
+}
+.nav-links .nav-cta { border-color:#69383f; color:#e9dcdc; }
+.logo-image { width:130px; max-height:62px; }
+
+/* FOTO DEL INICIO. Sustituye assets/img/hero.jpg para cambiarla.
+   La foto de referencia original se conserva en assets/img/foto-original-concierto.jpg. */
+.hero {
+  min-height:720px;
+  min-height:max(720px, calc(100svh - 78px));
+  background:#0c080a;
+  border-bottom:1px solid #352327;
+}
+.hero-art {
+  background:#0c080a;
+}
+.hero-photo {
+  background-image:url('../img/hero.jpg');
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  opacity:var(--foto-opacidad);
+  filter:brightness(var(--foto-brillo));
+}
+.has-hero-photo .hero-photo { opacity:var(--foto-opacidad); }
+.hero-art:after {
+  background:linear-gradient(90deg,rgba(7,5,6,.12) 0%,rgba(7,5,6,0) 49%,rgba(7,5,6,.12) 100%),
+    linear-gradient(0deg, rgba(10,5,7,.65), transparent 17%, transparent 77%, rgba(10,5,7,.32));
+}
+.hero-inner {
+  max-width:1390px;
+  padding-top:75px;
+  padding-bottom:120px;
+}
+.hero h1.signature-title {
+  max-width:min(710px, 61vw);
+  margin:0 0 -2px -15px;
+}
+.hero h1.signature-title img {
+  width:100%;
+  max-height:370px;
+  filter:drop-shadow(0 8px 22px rgba(0,0,0,.36));
+}
+.signature-underline {
+  width:min(365px,40vw);
+  height:2px;
+  background:var(--accent);
+  transform:rotate(-2.3deg);
+  margin:-18px 0 35px 170px;
+  box-shadow:0 0 18px rgba(169,52,62,.26);
+}
+.hero-kicker {
+  font-family:'DM Sans',Arial,sans-serif;
+  letter-spacing:.29em;
+  font-weight:600;
+  font-size:11px;
+  color:#fff5f4;
+  text-transform:uppercase;
+  margin:0 0 26px 24px;
+}
+.hero-kicker span { color:#d26a75; padding:0 7px; }
+.hero-sub {
+  font-family:Georgia, 'Times New Roman',serif;
+  font-size:clamp(19px,2vw,27px);
+  font-style:italic;
+  letter-spacing:.03em;
+  color:#fff;
+  margin:0 0 0 26px;
+  text-shadow:0 3px 15px rgba(0,0,0,.5);
+}
+.hero .action-row { margin:42px 0 0 24px; }
+.hero .btn { min-height:46px; font-size:10px; }
+.hero .btn-outline { border-color:#9c777a; background:rgba(0,0,0,.18); }
+.side-note { color:#b7a5a5; }
+
+/* Detalles del resto de la web */
+.callout,.event-empty { background:#1b1416; }
+
+/* Banner en movimiento */
+.ticker {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  background: #851e29;
+  color: #ffffff;
+  padding: 15px 0;
+}
+.ticker-line {
+  display: flex;
+  width: max-content;
+  animation: moverTicker 28s linear infinite;
+  will-change: transform;
+}
+.ticker-group {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+  padding-right: 30px;
+  min-width: 100vw;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+.ticker-group span {
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.photo-frame { background:#1b1416; }
+.photo-frame img { filter:saturate(.83); }
+
+/* Móvil: mantenemos la foto detrás, pero damos más contraste al logo. */
+@media (max-width:850px) {
+  .site-header {height:72px;}
+  .hero {min-height:790px; min-height:calc(100svh - 72px);}
+  .hero-photo {background-position:67% center;}
+  .hero-art:after {background:linear-gradient(0deg,rgba(5,4,5,.90) 4%,rgba(5,4,5,.64) 43%,rgba(5,4,5,.30) 92%);}
+  .hero-inner {padding-top:180px;padding-bottom:95px;}
+  .hero h1.signature-title {max-width:min(710px,90vw); margin-left:-9px;}
+  .signature-underline {margin:-12px 0 32px 14vw;width:48vw;}
+  .hero-kicker,.hero-sub,.hero .action-row {margin-left:8px;}
+  .nav-links a[aria-current="page"]:after {display:none;}
+}
+@media (max-width:560px) {
+  .hero { min-height:780px; }
+  .hero-photo {
+    background-image:url('../img/foto-original-concierto.jpg');
+    background-position:52% 22%;
+    background-size:cover;
+    filter:brightness(.45) saturate(.8);
+  }
+  .hero-art:after { background:linear-gradient(0deg,rgba(5,4,5,.99),rgba(5,4,5,.72) 30%,rgba(5,4,5,.35) 80%,rgba(5,4,5,.30)); }
+  .hero-inner {padding-top:330px;padding-bottom:70px;}
+  .hero h1.signature-title {max-width:100%;margin-left:-6px;}
+  .signature-underline {width:46vw;margin:-6px 0 20px 11vw;}
+  .hero-kicker {font-size:9px;letter-spacing:.13em;margin-bottom:22px;}
+  .hero-kicker span {padding:0 2px;}
+  .hero-sub {font-size:21px;line-height:1.4;}
+  .hero .action-row {margin-top:30px;gap:10px;}
+  .hero .btn {width:100%;max-width:310px;}
+  .side-note {display:none;}
+}
+@media (prefers-reduced-motion:reduce) {
+  *,*::before,*::after {scroll-behavior:auto!important;transition-duration:0.01ms!important;animation-duration:0.01ms!important;}
+}
+/* Movimiento continuo */
+@keyframes moverTicker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Adaptación para móviles */
+@media (max-width: 768px) {
+  .ticker {
+    padding: 12px 0;
+  }
+
+  .ticker-group {
+    gap: 20px;
+    padding-right: 20px;
+  }
+
+  .ticker-group span {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .ticker-line {
+    animation: none;
+  }
+}
