@@ -6,7 +6,7 @@ window.ARDURA = {
   tagline: 'Canciones para lo que no sabemos decir.',
   email: 'antonioardura01@gmail.com',
   social: {
-    spotify: 'https://open.spotify.com/artist/14sIC4KR5MPEATxZHojhpd', instagram: 'https://www.instagram.com/aardura_01/', youtube: 'https://www.youtube.com/c/Antonioa17', tiktok: 'www.tiktok.com/@aardura01', appleMusic: 'https://music.apple.com/es/artist/antonio-ardura/1721814116'
+    spotify: 'https://open.spotify.com/artist/14sIC4KR5MPEATxZHojhpd', instagram: 'https://www.instagram.com/aardura_01/', youtube: 'https://www.youtube.com/c/Antonioa17', tiktok: 'https://www.tiktok.com/@aardura01', appleMusic: 'https://music.apple.com/es/artist/antonio-ardura/1721814116'
   },
   songs: [
     {title:'ROCBAR',slug:'rocbar',type:'single',spotify:'https://open.spotify.com/track/6ZgpYJ1jCXOGJGLrKtAlDs',youtube:'https://www.youtube.com/watch?v=uaF8UNWfw6E',cover:'assets/img/ROCBAR.jpg',palette:['#c9aa67','#6f7770','#31342c']},
