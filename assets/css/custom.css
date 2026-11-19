@@ -232,3 +232,53 @@ body { background:#0d0b0d; }
 .journal-teaser .container{display:flex;align-items:center;justify-content:space-between;gap:30px}
 .journal-teaser h2{font:normal clamp(44px,5.5vw,76px)/1 Georgia,serif;letter-spacing:-.055em;margin:15px 0}
 @media(max-width:700px){.journal-grid{grid-template-columns:1fr}.journal-intro,.journal-teaser .container{flex-direction:column;align-items:flex-start}.journal-card{min-height:260px}.journal-article-wrap{padding-top:50px}.journal-back{margin-bottom:48px}.journal-body p{font-size:17px}}
+
+
+/* NEWSLETTER ARDURA */
+
+.newsletter-signup {
+  background: #101010;
+  padding: 85px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.newsletter-signup-content {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.newsletter-signup h2 {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 400;
+  margin: 20px 0;
+}
+
+.newsletter-signup p {
+  color: #c6bfc0;
+  line-height: 1.7;
+}
+
+.newsletter-form {
+  width: 100%;
+  max-width: 540px;
+  margin: 35px auto 0;
+}
+
+.newsletter-form iframe {
+  display: block;
+  width: 100%;
+  min-height: 305px;
+  border: none;
+}
+
+@media (max-width: 600px) {
+  .newsletter-signup {
+    padding: 55px 16px;
+  }
+
+  .newsletter-form iframe {
+    min-height: 380px;
+  }
+}
+
